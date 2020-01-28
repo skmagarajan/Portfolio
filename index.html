@@ -6,7 +6,7 @@
 </head>
 <body>
 	<div class="img1">
-		<div class="ptext">
+		<div class="ptext" id = "myHeader">
 			<span class="border-dark">
 				Saravana Krishnan Magarajan
 			</span>
@@ -68,4 +68,18 @@
 	</div>
 
 </body>
+<script>
+	window.onscroll = function() {myFunction()};
+
+	var header = document.getElementById("myHeader");
+	var sticky = header.offsetTop;
+
+	function myFunction() {
+	  if (window.pageYOffset > sticky) {
+		header.classList.add("sticky");
+	  } else {
+		header.classList.remove("sticky");
+	  }
+	}
+</script>
 </html>
